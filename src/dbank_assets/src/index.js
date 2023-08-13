@@ -34,6 +34,8 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     if (withdrawalAmount) {
       await dbank.withdraw(withdrawalAmount);
     }
+    await updateBalance();
+    btn.value = "Compounding Interest..."
     await dbank.compound();
   } catch (err) {
     console.log(err)
