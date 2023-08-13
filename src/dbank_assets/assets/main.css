@@ -114,3 +114,10 @@ textarea[name="address"] {
   padding: 10px 2.7rem;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+
+#error {
+  color: #FF4D4D;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}

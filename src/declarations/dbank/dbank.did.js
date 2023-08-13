@@ -3,6 +3,7 @@ export const idlFactory = ({ IDL }) => {
     'checkBalance' : IDL.Func([], [IDL.Float64], ['query']),
     'compound' : IDL.Func([], [IDL.Float64], []),
     'compoundTime' : IDL.Func([], [IDL.Int], ['query']),
+    'resetAccount' : IDL.Func([], [IDL.Text], []),
     'topUp' : IDL.Func([IDL.Float64], [], ['oneway']),
     'withdraw' : IDL.Func([IDL.Float64], [], ['oneway']),
   });

@@ -4,14 +4,15 @@ import Float "mo:base/Float";
 
 actor DBank {
   stable var currentValue : Float = 300;
-  currentValue := 300;
+  // currentValue := 300;
+  Debug.print(debug_show (currentValue));
 
   stable var startTime = Time.now();
-  startTime := Time.now();
+  // startTime := Time.now();
   Debug.print(debug_show (startTime));
 
   var id = 1234567890;
-  // Debug.print(debug_show(id));
+  Debug.print(debug_show(id));
 
   public func topUp(amount : Float) {
     currentValue += amount;
@@ -26,6 +27,12 @@ actor DBank {
     } else {
       Debug.print("Amount too large, currentValue less than zero.");
     };
+  };
+
+  public func resetAccount(): async Text {
+    currentValue := 300;
+    startTime := Time.now();
+    return "Account reset.";
   };
 
   public query func checkBalance() : async Float {
