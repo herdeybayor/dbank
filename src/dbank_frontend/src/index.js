@@ -1,5 +1,4 @@
-import { dbank } from "../../declarations/dbank";
-
+import { dbank_backend as dbank } from "../../declarations/dbank_backend";
 
 const updateBalance = async () => {
   const value = await dbank.checkBalance()
